@@ -513,7 +513,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 401:
+/***/ 600:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4331,19 +4331,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 890:
+/***/ 463:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(401);
+var content = __webpack_require__(600);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("111ed564", content, false, {});
+var update = add("aa7b6b1e", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -12388,13 +12388,13 @@ var Legend_component = normalizeComponent(
 )
 
 /* harmony default export */ const Legend = (Legend_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/TitleLegend.vue?vue&type=template&id=0b7e55e1
-var TitleLegendvue_type_template_id_0b7e55e1_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/TitleLegend.vue?vue&type=template&id=7fdc78e5
+var TitleLegendvue_type_template_id_7fdc78e5_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
-    staticClass: "trading-vue-legend",
+    staticClass: "trading-vue-legend title-legend",
     style: _vm.calc_style
   }, [_vm.grid_id === 0 && _vm.showTitleChartLegend ? _c('div', {
     staticClass: "trading-vue-ohlcv",
@@ -12432,10 +12432,10 @@ var TitleLegendvue_type_template_id_0b7e55e1_render = function render() {
     }
   }, [_vm._v("\r\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\r\n        ")]) : _vm._e()], 2) : _vm._e()]);
 };
-var TitleLegendvue_type_template_id_0b7e55e1_staticRenderFns = [];
-TitleLegendvue_type_template_id_0b7e55e1_render._withStripped = true;
+var TitleLegendvue_type_template_id_7fdc78e5_staticRenderFns = [];
+TitleLegendvue_type_template_id_7fdc78e5_render._withStripped = true;
 
-;// ./src/components/TitleLegend.vue?vue&type=template&id=0b7e55e1
+;// ./src/components/TitleLegend.vue?vue&type=template&id=7fdc78e5
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/TitleLegend.vue?vue&type=script&lang=js
 
@@ -12573,9 +12573,9 @@ var TitleLegendvue_type_script_lang_js_settingPng = icons_namespaceObject["gear.
 });
 ;// ./src/components/TitleLegend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_TitleLegendvue_type_script_lang_js = (TitleLegendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/TitleLegend.vue?vue&type=style&index=0&id=0b7e55e1&prod&lang=css
-var TitleLegendvue_type_style_index_0_id_0b7e55e1_prod_lang_css = __webpack_require__(890);
-;// ./src/components/TitleLegend.vue?vue&type=style&index=0&id=0b7e55e1&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/TitleLegend.vue?vue&type=style&index=0&id=7fdc78e5&prod&lang=css
+var TitleLegendvue_type_style_index_0_id_7fdc78e5_prod_lang_css = __webpack_require__(463);
+;// ./src/components/TitleLegend.vue?vue&type=style&index=0&id=7fdc78e5&prod&lang=css
 
 ;// ./src/components/TitleLegend.vue
 
@@ -12588,8 +12588,8 @@ var TitleLegendvue_type_style_index_0_id_0b7e55e1_prod_lang_css = __webpack_requ
 
 var TitleLegend_component = normalizeComponent(
   components_TitleLegendvue_type_script_lang_js,
-  TitleLegendvue_type_template_id_0b7e55e1_render,
-  TitleLegendvue_type_template_id_0b7e55e1_staticRenderFns,
+  TitleLegendvue_type_template_id_7fdc78e5_render,
+  TitleLegendvue_type_template_id_7fdc78e5_staticRenderFns,
   false,
   null,
   null,

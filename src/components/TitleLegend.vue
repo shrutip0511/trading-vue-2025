@@ -1,5 +1,5 @@
 <template>
-<div class="trading-vue-legend"
+<div class="trading-vue-legend title-legend"
      :style="calc_style">
     <div v-if="(grid_id === 0 && showTitleChartLegend)"
          class="trading-vue-ohlcv"
