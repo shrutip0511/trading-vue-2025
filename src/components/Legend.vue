@@ -89,7 +89,7 @@ export default {
     computed: {
       isIndicatorVisible(){
         if (this.grid_id == 0) {
-            return !isOverlayCollapsed 
+            return !this.isOverlayCollapsed 
         }
         return true
       },
