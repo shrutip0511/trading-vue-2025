@@ -215,6 +215,8 @@ export default {
             this.$emit('legend-button-click', event)
         },
         collapse_button_click(value) {
+            console.log('on-collapse-change', value);
+            
             this.$emit('on-collapse-change', value)
         }
     }
