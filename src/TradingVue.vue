@@ -10,7 +10,7 @@
     </toolbar>
     <widgets v-if="controllers.length" ref="widgets" :map="ws" :width="width" :height="height" :tv="this" :dc="data">
     </widgets>
-    <chart :enableZoom="enableZoom" :showTitleChartLegend="showTitleChartLegend"
+    <chart :enableZoom="enableZoom" :showTitleChartLegend="showTitleChartLegend" :isOverlayCollapsed="isOverlayCollapsed"
       :enableSideBarBoxValue="enableSideBarBoxValue" :applyShaders="applyShaders" :priceLine="priceLine"
       :decimalPlace="decimalPlace" :legendDecimal="legendDecimal" :enableCrosshair="enableCrosshair"
       :ignoreNegativeIndex="ignoreNegativeIndex" :ignore_OHLC="ignore_OHLC" :key="reset" ref="chart"
