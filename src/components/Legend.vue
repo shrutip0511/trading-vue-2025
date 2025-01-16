@@ -36,7 +36,7 @@
       </legend-button> -->
         </div>
         <button type="button" class="p-button p-component p-button-sm collapse-btn"
-            v-if="(grid_id === 0 && isOverlayCollapsed)" @click="collapse_button_click(false)" style="cursor: pointer;">
+            v-if="(grid_id === 0 && isOverlayCollapsed)" @click="collapse_button_click(false)" style="cursor: pointer;pointer-events: all;">
 
             <span class="pi pi-angle-down p-button-icon p-button-icon-left"></span>
             <span class="p-button-label">{{ this.indicators.length }}</span>
@@ -61,7 +61,7 @@
                 </spinner>
             </transition>
         </div>
-        <button type="button" class="p-button p-component p-button-sm collapse-btn" v-if="(grid_id === 0 && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;">
+        <button type="button" class="p-button p-component p-button-sm collapse-btn" v-if="(grid_id === 0 && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;pointer-events: all;">
 
             <span class="pi pi-angle-up p-button-icon"></span>
         </button>
