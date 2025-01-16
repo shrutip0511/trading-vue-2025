@@ -443,14 +443,14 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 243:
+/***/ 806:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(314);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.id, "\n.trading-vue-legend {\r\n    position: relative;\r\n    z-index: 1;\r\n    font-size: 1.25em;\r\n    margin-left: 10px;\r\n    pointer-events: none;\r\n    text-align: left;\r\n    user-select: none;\r\n    font-weight: 300;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n        font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n    pointer-events: none;\r\n    margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n    font-variant-numeric: tabular-nums;\r\n    font-size: 0.95em;\r\n    color: #999999; /* TODO: move => params */\r\n    margin-left: 0.1em;\r\n    margin-right: 0.2em;\n}\n.t-vue-title {\r\n    margin-right: 0.25em;\r\n    font-size: 1.45em;\n}\n.t-vue-ind {\r\n  display: flex;\r\n    margin-left: 0.2em;\r\n    margin-bottom: 0.5em;\r\n    font-size: 1.0em;\r\n    margin-top: 0.3em;\n}\n.t-vue-ivalue {\r\n    margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n    color: #999999; /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active\r\n{\r\n    transition: all .25s ease;\n}\n.tvjs-appear-enter, .tvjs-appear-leave-to\r\n{\r\n    opacity: 0;\n}\r\n", ""]);
+exports.push([module.id, "\n.trading-vue-legend {\r\n    position: relative;\r\n    z-index: 1;\r\n    font-size: 1.25em;\r\n    margin-left: 10px;\r\n    pointer-events: none;\r\n    text-align: left;\r\n    user-select: none;\r\n    font-weight: 300;\n}\n@media (min-resolution: 2x) {\n.trading-vue-legend {\r\n        font-weight: 400;\n}\n}\n.trading-vue-ohlcv {\r\n    pointer-events: none;\r\n    margin-bottom: 0.5em;\n}\n.t-vue-lspan {\r\n    font-variant-numeric: tabular-nums;\r\n    font-size: 0.95em;\r\n    color: #999999;\r\n    /* TODO: move => params */\r\n    margin-left: 0.1em;\r\n    margin-right: 0.2em;\n}\n.t-vue-title {\r\n    margin-right: 0.25em;\r\n    font-size: 1.45em;\n}\n.t-vue-ind {\r\n    display: flex;\r\n    margin-left: 0.2em;\r\n    margin-bottom: 0.5em;\r\n    font-size: 1.0em;\r\n    margin-top: 0.3em;\n}\n.t-vue-ivalue {\r\n    margin-left: 0.5em;\n}\n.t-vue-unknown {\r\n    color: #999999;\r\n    /* TODO: move => params */\n}\n.tvjs-appear-enter-active,\r\n.tvjs-appear-leave-active {\r\n    transition: all .25s ease;\n}\n.tvjs-appear-enter,\r\n.tvjs-appear-leave-to {\r\n    opacity: 0;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -4241,19 +4241,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 450:
+/***/ 351:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(243);
+var content = __webpack_require__(806);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("6dd4c78c", content, false, {});
+var update = add("2053bbcd", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -11878,8 +11878,8 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=4d5960d8
-var Legendvue_type_template_id_4d5960d8_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=31309ba2
+var Legendvue_type_template_id_31309ba2_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
@@ -11905,22 +11905,31 @@ var Legendvue_type_template_id_4d5960d8_render = function render() {
     style: {
       color: _vm.common.colors.title
     }
-  }, [_vm._v("\r\n              " + _vm._s(_vm.common.title_txt) + "\r\n        ")]) : _vm._e(), _vm._v(" "), _vm.show_values && !_vm.show_CustomProps ? _c('span', [_vm._v("\r\n            O"), _c('span', {
+  }, [_vm._v("\n            " + _vm._s(_vm.common.title_txt) + "\n        ")]) : _vm._e(), _vm._v(" "), _vm.show_values && !_vm.show_CustomProps ? _c('span', [_vm._v("\n            O"), _c('span', {
     staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[0]))]), _vm._v("\r\n            H"), _c('span', {
+  }, [_vm._v(_vm._s(_vm.ohlcv[0]))]), _vm._v("\n            H"), _c('span', {
     staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[1]))]), _vm._v("\r\n            L"), _c('span', {
+  }, [_vm._v(_vm._s(_vm.ohlcv[1]))]), _vm._v("\n            L"), _c('span', {
     staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[2]))]), _vm._v("\r\n            C"), _c('span', {
+  }, [_vm._v(_vm._s(_vm.ohlcv[2]))]), _vm._v("\n            C"), _c('span', {
     staticClass: "t-vue-lspan"
-  }, [_vm._v(_vm._s(_vm.ohlcv[3]))]), _vm._v("\r\n            V"), _c('span', {
+  }, [_vm._v(_vm._s(_vm.ohlcv[3]))]), _vm._v("\n            V"), _c('span', {
     staticClass: "t-vue-lspan"
   }, [_vm._v(_vm._s(_vm.ohlcv[4]))])]) : _vm._e(), _vm._v(" "), !_vm.show_values ? _c('span', {
     staticClass: "t-vue-lspan",
     style: {
       color: _vm.common.colors.text
     }
-  }, [_vm._v("\r\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\r\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm.grid_id === 0 && _vm.isOverlayCollapsed ? _c('button', [_vm._v(_vm._s(this.indicators.length))]) : _vm._e(), _vm._v(" "), _vm._l(this.indicators, function (ind) {
+  }, [_vm._v("\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm.grid_id === 0 && _vm.isOverlayCollapsed ? _c('button', {
+    staticClass: "p-button p-component p-button-secondary",
+    attrs: {
+      "type": "button"
+    }
+  }, [_c('span', {
+    staticClass: "pi-angle-down p-button-icon p-button-icon-left"
+  }), _vm._v(" "), _c('span', {
+    staticClass: "p-button-label"
+  }, [_vm._v(_vm._s(this.indicators.length))])]) : _vm._e(), _vm._v(" "), _vm._l(this.indicators, function (ind) {
     return _vm.isIndicatorVisible ? _c('div', {
       staticClass: "t-vue-ind"
     }, [_c('span', {
@@ -11946,10 +11955,10 @@ var Legendvue_type_template_id_4d5960d8_render = function render() {
         style: {
           color: v.color
         }
-      }, [_vm._v("\r\n                " + _vm._s(v.value) + "\r\n            ")]) : _vm._e();
+      }, [_vm._v("\n                " + _vm._s(v.value) + "\n            ")]) : _vm._e();
     }), 0) : _vm._e(), _vm._v(" "), ind.unk ? _c('span', {
       staticClass: "t-vue-unknown"
-    }, [_vm._v("\r\n            (Unknown type)\r\n        ")]) : _vm._e(), _vm._v(" "), _c('transition', {
+    }, [_vm._v("\n            (Unknown type)\n        ")]) : _vm._e(), _vm._v(" "), _c('transition', {
       attrs: {
         "name": "tvjs-appear"
       }
@@ -11958,12 +11967,21 @@ var Legendvue_type_template_id_4d5960d8_render = function render() {
         "colors": _vm.common.colors
       }
     }) : _vm._e()], 1)], 1) : _vm._e();
-  }), _vm._v(" "), _vm.grid_id === 0 && !_vm.isOverlayCollapsed ? _c('button', [_vm._v("^")]) : _vm._e()], 2);
+  }), _vm._v(" "), _vm.grid_id === 0 && !_vm.isOverlayCollapsed ? _c('button', {
+    staticClass: "p-button p-component p-button-secondary",
+    attrs: {
+      "type": "button"
+    }
+  }, [_c('span', {
+    staticClass: "pi pi-angle-up p-button-icon"
+  }), _vm._v(" "), _c('span', {
+    staticClass: "p-button-label"
+  }, [_vm._v(" ")])]) : _vm._e()], 2);
 };
-var Legendvue_type_template_id_4d5960d8_staticRenderFns = [];
-Legendvue_type_template_id_4d5960d8_render._withStripped = true;
+var Legendvue_type_template_id_31309ba2_staticRenderFns = [];
+Legendvue_type_template_id_31309ba2_render._withStripped = true;
 
-;// ./src/components/Legend.vue?vue&type=template&id=4d5960d8
+;// ./src/components/Legend.vue?vue&type=template&id=31309ba2
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12323,9 +12341,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=4d5960d8&prod&lang=css
-var Legendvue_type_style_index_0_id_4d5960d8_prod_lang_css = __webpack_require__(450);
-;// ./src/components/Legend.vue?vue&type=style&index=0&id=4d5960d8&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=31309ba2&prod&lang=css
+var Legendvue_type_style_index_0_id_31309ba2_prod_lang_css = __webpack_require__(351);
+;// ./src/components/Legend.vue?vue&type=style&index=0&id=31309ba2&prod&lang=css
 
 ;// ./src/components/Legend.vue
 
@@ -12338,8 +12356,8 @@ var Legendvue_type_style_index_0_id_4d5960d8_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_4d5960d8_render,
-  Legendvue_type_template_id_4d5960d8_staticRenderFns,
+  Legendvue_type_template_id_31309ba2_render,
+  Legendvue_type_template_id_31309ba2_staticRenderFns,
   false,
   null,
   null,
