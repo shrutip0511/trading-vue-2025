@@ -35,7 +35,7 @@
       >
       </legend-button> -->
         </div>
-        <button type="button" class="p-button p-component p-button-secondary"
+        <button type="button" class="p-button p-component p-button-sm collapse-btn"
             v-if="(grid_id === 0 && isOverlayCollapsed)" @click="collapse_button_click(false)" style="cursor: pointer;">
 
             <span class="pi pi-angle-down p-button-icon p-button-icon-left"></span>
@@ -61,7 +61,7 @@
                 </spinner>
             </transition>
         </div>
-        <button type="button" class="p-button p-component p-button-secondary" v-if="(grid_id === 0 && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;">
+        <button type="button" class="p-button p-component p-button-sm collapse-btn" v-if="(grid_id === 0 && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;">
 
             <span class="pi pi-angle-up p-button-icon"></span>
         </button>
@@ -215,8 +215,6 @@ export default {
             this.$emit('legend-button-click', event)
         },
         collapse_button_click(value) {
-            console.log('on-collapse-change', value);
-            
             this.$emit('on-collapse-change', value)
         }
     }
