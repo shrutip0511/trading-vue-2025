@@ -2,6 +2,7 @@
 <div class="trading-vue-legend"
      :style="calc_style">
      {{ isOverlayCollapsed ? "true":'false' }}
+     {{ isOverlayCollapsed }}
     <div v-if="(grid_id === 0 && !showTitleChartLegend)"
          class="trading-vue-ohlcv"
         :style = "{ 'max-width': common.width + 'px' }">

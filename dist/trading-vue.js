@@ -443,7 +443,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 125:
+/***/ 983:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4241,19 +4241,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 444:
+/***/ 322:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(125);
+var content = __webpack_require__(983);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("35c606f4", content, false, {});
+var update = add("0877c88c", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -11878,15 +11878,15 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=1ae99122
-var Legendvue_type_template_id_1ae99122_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=e930c532
+var Legendvue_type_template_id_e930c532_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "trading-vue-legend",
     style: _vm.calc_style
-  }, [_vm._v("\r\n     " + _vm._s(_vm.isOverlayCollapsed ? "true" : 'false') + "\r\n    "), _vm.grid_id === 0 && !_vm.showTitleChartLegend ? _c('div', {
+  }, [_vm._v("\r\n     " + _vm._s(_vm.isOverlayCollapsed ? "true" : 'false') + "\r\n     " + _vm._s(_vm.isOverlayCollapsed) + "\r\n    "), _vm.grid_id === 0 && !_vm.showTitleChartLegend ? _c('div', {
     staticClass: "trading-vue-ohlcv",
     style: {
       'max-width': _vm.common.width + 'px'
@@ -11960,10 +11960,10 @@ var Legendvue_type_template_id_1ae99122_render = function render() {
     }) : _vm._e()], 1)], 1);
   })], 2);
 };
-var Legendvue_type_template_id_1ae99122_staticRenderFns = [];
-Legendvue_type_template_id_1ae99122_render._withStripped = true;
+var Legendvue_type_template_id_e930c532_staticRenderFns = [];
+Legendvue_type_template_id_e930c532_render._withStripped = true;
 
-;// ./src/components/Legend.vue?vue&type=template&id=1ae99122
+;// ./src/components/Legend.vue?vue&type=template&id=e930c532
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12317,9 +12317,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=1ae99122&prod&lang=css
-var Legendvue_type_style_index_0_id_1ae99122_prod_lang_css = __webpack_require__(444);
-;// ./src/components/Legend.vue?vue&type=style&index=0&id=1ae99122&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=e930c532&prod&lang=css
+var Legendvue_type_style_index_0_id_e930c532_prod_lang_css = __webpack_require__(322);
+;// ./src/components/Legend.vue?vue&type=style&index=0&id=e930c532&prod&lang=css
 
 ;// ./src/components/Legend.vue
 
@@ -12332,8 +12332,8 @@ var Legendvue_type_style_index_0_id_1ae99122_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_1ae99122_render,
-  Legendvue_type_template_id_1ae99122_staticRenderFns,
+  Legendvue_type_template_id_e930c532_render,
+  Legendvue_type_template_id_e930c532_staticRenderFns,
   false,
   null,
   null,
