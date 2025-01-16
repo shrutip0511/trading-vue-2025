@@ -443,7 +443,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 983:
+/***/ 181:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4241,19 +4241,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 322:
+/***/ 916:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(983);
+var content = __webpack_require__(181);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("0877c88c", content, false, {});
+var update = add("5d6de57e", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -11878,15 +11878,15 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=e930c532
-var Legendvue_type_template_id_e930c532_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=2b195efd
+var Legendvue_type_template_id_2b195efd_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "trading-vue-legend",
     style: _vm.calc_style
-  }, [_vm._v("\r\n     " + _vm._s(_vm.isOverlayCollapsed ? "true" : 'false') + "\r\n     " + _vm._s(_vm.isOverlayCollapsed) + "\r\n    "), _vm.grid_id === 0 && !_vm.showTitleChartLegend ? _c('div', {
+  }, [_vm.grid_id === 0 && !_vm.showTitleChartLegend ? _c('div', {
     staticClass: "trading-vue-ohlcv",
     style: {
       'max-width': _vm.common.width + 'px'
@@ -11920,8 +11920,8 @@ var Legendvue_type_template_id_e930c532_render = function render() {
     style: {
       color: _vm.common.colors.text
     }
-  }, [_vm._v("\r\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\r\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm._l(this.indicators, function (ind) {
-    return _c('div', {
+  }, [_vm._v("\r\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\r\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v("\r\n    " + _vm._s("".concat(_vm.isOverlayCollapsed, " - ").concat(_vm.isIndicatorVisible)) + "\r\n    "), _vm.grid_id === 0 && _vm.isOverlayCollapsed ? _c('button', [_vm._v(_vm._s(this.indicators.length))]) : _vm._e(), _vm._v(" "), _vm._l(this.indicators, function (ind) {
+    return _vm.isIndicatorVisible ? _c('div', {
       staticClass: "t-vue-ind"
     }, [_c('span', {
       staticClass: "t-vue-iname"
@@ -11957,13 +11957,13 @@ var Legendvue_type_template_id_e930c532_render = function render() {
       attrs: {
         "colors": _vm.common.colors
       }
-    }) : _vm._e()], 1)], 1);
-  })], 2);
+    }) : _vm._e()], 1)], 1) : _vm._e();
+  }), _vm._v(" "), _vm.grid_id === 0 && !_vm.isOverlayCollapsed ? _c('button', [_vm._v("^")]) : _vm._e()], 2);
 };
-var Legendvue_type_template_id_e930c532_staticRenderFns = [];
-Legendvue_type_template_id_e930c532_render._withStripped = true;
+var Legendvue_type_template_id_2b195efd_staticRenderFns = [];
+Legendvue_type_template_id_2b195efd_render._withStripped = true;
 
-;// ./src/components/Legend.vue?vue&type=template&id=e930c532
+;// ./src/components/Legend.vue?vue&type=template&id=2b195efd
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12196,6 +12196,12 @@ var settingPng = icons_namespaceObject["gear.png"];
   },
   props: ['common', 'values', 'decimalPlace', 'grid_id', 'meta_props', 'legendDecimal', 'showTitleChartLegend', 'isOverlayCollapsed'],
   computed: {
+    isIndicatorVisible: function isIndicatorVisible() {
+      if (this.grid_id == 0) {
+        return !isOverlayCollapsed;
+      }
+      return true;
+    },
     show_CustomProps: function show_CustomProps() {
       var _this$common;
       return ((_this$common = this.common) === null || _this$common === void 0 ? void 0 : _this$common.show_CustomProps) || false;
@@ -12317,9 +12323,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=e930c532&prod&lang=css
-var Legendvue_type_style_index_0_id_e930c532_prod_lang_css = __webpack_require__(322);
-;// ./src/components/Legend.vue?vue&type=style&index=0&id=e930c532&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=2b195efd&prod&lang=css
+var Legendvue_type_style_index_0_id_2b195efd_prod_lang_css = __webpack_require__(916);
+;// ./src/components/Legend.vue?vue&type=style&index=0&id=2b195efd&prod&lang=css
 
 ;// ./src/components/Legend.vue
 
@@ -12332,8 +12338,8 @@ var Legendvue_type_style_index_0_id_e930c532_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_e930c532_render,
-  Legendvue_type_template_id_e930c532_staticRenderFns,
+  Legendvue_type_template_id_2b195efd_render,
+  Legendvue_type_template_id_2b195efd_staticRenderFns,
   false,
   null,
   null,

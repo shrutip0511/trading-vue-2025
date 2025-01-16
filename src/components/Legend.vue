@@ -1,8 +1,7 @@
 <template>
 <div class="trading-vue-legend"
      :style="calc_style">
-     {{ isOverlayCollapsed ? "true":'false' }}
-     {{ isOverlayCollapsed }}
+     
     <div v-if="(grid_id === 0 && !showTitleChartLegend)"
          class="trading-vue-ohlcv"
         :style = "{ 'max-width': common.width + 'px' }">
@@ -40,7 +39,9 @@
       >
       </legend-button> -->
     </div>
-    <div v-for="ind in this.indicators" class="t-vue-ind">
+    {{ `${isOverlayCollapsed} - ${isIndicatorVisible}` }}
+    <button v-if="(grid_id === 0 && isOverlayCollapsed)">{{ this.indicators.length }}</button>
+    <div v-for="ind in this.indicators" class="t-vue-ind" v-if="isIndicatorVisible">
         <span class="t-vue-iname">{{ind.name}}</span>
         <button-group
             v-if="ind.showLegendButtons"
@@ -68,6 +69,8 @@
             </spinner>
         </transition>
     </div>
+    <button v-if="(grid_id === 0 && !isOverlayCollapsed)">^</button>
+
 </div>
 </template>
 <script>
@@ -84,6 +87,12 @@ export default {
         'common', 'values','decimalPlace','grid_id', 'meta_props','legendDecimal', 'showTitleChartLegend','isOverlayCollapsed'
     ],
     computed: {
+      isIndicatorVisible(){
+        if (this.grid_id == 0) {
+            return !isOverlayCollapsed 
+        }
+        return true
+      },
       show_CustomProps(){
         return this.common?.show_CustomProps || false;
       },
