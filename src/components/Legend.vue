@@ -38,7 +38,7 @@
         <button type="button" class="p-button p-component p-button-secondary"
             v-if="(grid_id === 0 && isOverlayCollapsed)">
 
-            <span class="pi-angle-down p-button-icon p-button-icon-left"></span>
+            <span class="pi pi-angle-down p-button-icon p-button-icon-left"></span>
             <span class="p-button-label">{{ this.indicators.length }}</span>
         </button>
         <div v-for="ind in this.indicators" class="t-vue-ind" v-if="isIndicatorVisible">
@@ -64,7 +64,6 @@
         <button type="button" class="p-button p-component p-button-secondary" v-if="(grid_id === 0 && !isOverlayCollapsed)">
 
             <span class="pi pi-angle-up p-button-icon"></span>
-            <span class="p-button-label">&nbsp;</span>
         </button>
 
     </div>
