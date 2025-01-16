@@ -16,7 +16,7 @@
       :ignoreNegativeIndex="ignoreNegativeIndex" :ignore_OHLC="ignore_OHLC" :key="reset" ref="chart"
       v-bind="chart_props" :tv_id="id" :config="chart_config" @custom-event="custom_event"
       @range-changed="range_changed" @chart_data_changed="chart_data_changed" @sidebar-transform="sidebar_transform"
-      @legend-button-click="legend_button">
+      @legend-button-click="legend_button" @on-collapse-change="collapse_button">
     </chart>
     <transition name="tvjs-drift">
       <the-tip v-if="tip" :data="tip" @remove-me="tip = null" />
@@ -401,6 +401,12 @@ export default {
     legend_button(event) {
       this.custom_event({
         event: "legend-button-click",
+        args: [event],
+      });
+    },
+    collapse_button(event) {
+      this.custom_event({
+        event: "on-collapse-change",
         args: [event],
       });
     },

@@ -26,6 +26,7 @@
       :showTitleChartLegend="showTitleChartLegend"
       :isOverlayCollapsed="isOverlayCollapsed"
       @legend-button-click="button_click"
+      @on-collapse-change="collapse_button_click"
     >
     </chart-legend>
 
@@ -248,6 +249,9 @@ export default {
     },
     button_click(event) {
       this.$emit("legend-button-click", event);
+    },
+    collapse_button_click(event) {
+      this.$emit("on-collapse-change", event);
     },
     register_kb(event) {
       this.$emit("register-kb-listener", event);

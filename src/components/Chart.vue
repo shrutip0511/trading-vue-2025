@@ -15,6 +15,7 @@
                   @layer-meta-props="layer_meta_props"
                   @custom-event="emit_custom_event"
                   @legend-button-click="legend_button_click"
+                  @on-collapse-change="collapse_button_click"
                   :enableZoom="enableZoom"
                   :enableSideBarBoxValue="enableSideBarBoxValue"
                   :decimalPlace="decimalPlace"
@@ -488,6 +489,9 @@ export default {
     },
     legend_button_click(event) {
       this.$emit('legend-button-click', event)
+    },
+    collapse_button_click(event) {
+      this.$emit('on-collapse-change', event)
     },
     register_kb(event) {
       if (!this.$refs.keyboard) return
