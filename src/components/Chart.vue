@@ -25,6 +25,7 @@
                   :ignore_OHLC="ignore_OHLC"
                   :tv_id="tv_id"
                   :showTitleChartLegend="showTitleChartLegend"
+                  :isOverlayCollapsed="isOverlayCollapsed"
 
     >
     </grid-section>
@@ -61,7 +62,7 @@ export default {
     'title_txt', 'data', 'width', 'height', 'font', 'colors',
     'overlays', 'tv_id', 'config', 'buttons', 'toolbar', 'ib', 'applyShaders',
     'skin', 'timezone', 'enableZoom', 'enableSideBarBoxValue', 'decimalPlace', 'ignore_OHLC', 'priceLine', 'ignoreNegativeIndex', 'enableCrosshair', 'legendDecimal',
-    'showSettingsButton', 'showTitleChartLegend'
+    'showSettingsButton', 'showTitleChartLegend','isOverlayCollapsed'
   ],
   data() {
     return {

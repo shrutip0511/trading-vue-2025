@@ -1,6 +1,7 @@
 <template>
 <div class="trading-vue-legend"
      :style="calc_style">
+     {{ isOverlayCollapsed }}
     <div v-if="(grid_id === 0 && !showTitleChartLegend)"
          class="trading-vue-ohlcv"
         :style = "{ 'max-width': common.width + 'px' }">
@@ -79,7 +80,7 @@ export default {
     name: 'ChartLegend',
     components: {LegendButton, ButtonGroup, Spinner },
     props: [
-        'common', 'values','decimalPlace','grid_id', 'meta_props','legendDecimal', 'showTitleChartLegend',
+        'common', 'values','decimalPlace','grid_id', 'meta_props','legendDecimal', 'showTitleChartLegend','isOverlayCollapsed'
     ],
     computed: {
       show_CustomProps(){

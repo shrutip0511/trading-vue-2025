@@ -235,6 +235,10 @@ export default {
     showTitleChartLegend: {
       type: Boolean,
       default: false
+    },
+    isOverlayCollapsed: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
