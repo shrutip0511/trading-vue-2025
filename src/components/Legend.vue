@@ -39,7 +39,6 @@
       >
       </legend-button> -->
     </div>
-    {{ `${isOverlayCollapsed} - ${isIndicatorVisible}` }}
     <button v-if="(grid_id === 0 && isOverlayCollapsed)">{{ this.indicators.length }}</button>
     <div v-for="ind in this.indicators" class="t-vue-ind" v-if="isIndicatorVisible">
         <span class="t-vue-iname">{{ind.name}}</span>
