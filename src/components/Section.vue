@@ -25,6 +25,7 @@
       :meta_props="get_meta_props"
       :showTitleChartLegend="showTitleChartLegend"
       :isOverlayCollapsed="isOverlayCollapsed"
+      :collpaseButton="collpaseButton"
       @legend-button-click="button_click"
       @on-collapse-change="collapse_button_click"
     >
@@ -81,7 +82,7 @@ export default {
     TitleChartLegend
   },
   mixins: [Shaders],
-  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal","tv_id","showTitleChartLegend","isOverlayCollapsed"],
+  props: ["common", "grid_id",'enableSideBarBoxValue', "enableZoom","decimalPlace","priceLine","enableCrosshair","applyShaders","ignore_OHLC","legendDecimal","tv_id","showTitleChartLegend","isOverlayCollapsed", "collpaseButton"],
   data() {
     return {
       meta_props: {},

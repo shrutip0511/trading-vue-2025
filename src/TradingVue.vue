@@ -10,7 +10,7 @@
     </toolbar>
     <widgets v-if="controllers.length" ref="widgets" :map="ws" :width="width" :height="height" :tv="this" :dc="data">
     </widgets>
-    <chart :enableZoom="enableZoom" :showTitleChartLegend="showTitleChartLegend" :isOverlayCollapsed="isOverlayCollapsed"
+    <chart :enableZoom="enableZoom" :showTitleChartLegend="showTitleChartLegend" :isOverlayCollapsed="isOverlayCollapsed" :collpaseButton="collpaseButton"
       :enableSideBarBoxValue="enableSideBarBoxValue" :applyShaders="applyShaders" :priceLine="priceLine"
       :decimalPlace="decimalPlace" :legendDecimal="legendDecimal" :enableCrosshair="enableCrosshair"
       :ignoreNegativeIndex="ignoreNegativeIndex" :ignore_OHLC="ignore_OHLC" :key="reset" ref="chart"
@@ -239,7 +239,11 @@ export default {
     isOverlayCollapsed: {
       type: Boolean,
       default: false
-    }
+    },
+    collpaseButton: {
+      type: Boolean,
+      default: false
+    },
   },
   data() {
     return { reset: 0, tip: null };
