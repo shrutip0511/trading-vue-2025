@@ -443,7 +443,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 250:
+/***/ 787:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4241,19 +4241,19 @@ if(false) {}
 
 /***/ }),
 
-/***/ 419:
+/***/ 589:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(250);
+var content = __webpack_require__(787);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("bbc369ee", content, false, {});
+var update = add("d9eb6e42", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -11884,15 +11884,15 @@ var Sidebar_component = normalizeComponent(
 )
 
 /* harmony default export */ const components_Sidebar = (Sidebar_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=5b57de01
-var Legendvue_type_template_id_5b57de01_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=template&id=c87713d4
+var Legendvue_type_template_id_c87713d4_render = function render() {
   var _vm$common;
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
     staticClass: "trading-vue-legend",
     style: _vm.calc_style
-  }, [_vm.grid_id === 0 && _vm.collpaseButton && !_vm.showTitleChartLegend ? _c('div', {
+  }, [_vm.grid_id === 0 && !_vm.showTitleChartLegend ? _c('div', {
     staticClass: "trading-vue-ohlcv",
     style: {
       'max-width': _vm.common.width + 'px'
@@ -11926,7 +11926,7 @@ var Legendvue_type_template_id_5b57de01_render = function render() {
     style: {
       color: _vm.common.colors.text
     }
-  }, [_vm._v("\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm.grid_id === 0 && _vm.isOverlayCollapsed ? _c('button', {
+  }, [_vm._v("\n            " + _vm._s((_vm.common.meta.last || [])[4]) + "\n        ")]) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _vm.isButtonvisible && _vm.isOverlayCollapsed ? _c('button', {
     staticClass: "p-button p-component p-button-sm collapse-btn",
     staticStyle: {
       "cursor": "pointer",
@@ -11982,7 +11982,7 @@ var Legendvue_type_template_id_5b57de01_render = function render() {
         "colors": _vm.common.colors
       }
     }) : _vm._e()], 1)], 1) : _vm._e();
-  }), _vm._v(" "), _vm.grid_id === 0 && _vm.collpaseButton && !_vm.isOverlayCollapsed ? _c('button', {
+  }), _vm._v(" "), _vm.isButtonvisible && !_vm.isOverlayCollapsed ? _c('button', {
     staticClass: "p-button p-component p-button-sm collapse-btn",
     staticStyle: {
       "cursor": "pointer",
@@ -12000,10 +12000,10 @@ var Legendvue_type_template_id_5b57de01_render = function render() {
     staticClass: "pi pi-angle-up p-button-icon"
   })]) : _vm._e()], 2);
 };
-var Legendvue_type_template_id_5b57de01_staticRenderFns = [];
-Legendvue_type_template_id_5b57de01_render._withStripped = true;
+var Legendvue_type_template_id_c87713d4_staticRenderFns = [];
+Legendvue_type_template_id_c87713d4_render._withStripped = true;
 
-;// ./src/components/Legend.vue?vue&type=template&id=5b57de01
+;// ./src/components/Legend.vue?vue&type=template&id=c87713d4
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ButtonGroup.vue?vue&type=template&id=72b6dd45
 var ButtonGroupvue_type_template_id_72b6dd45_render = function render() {
@@ -12236,6 +12236,9 @@ var settingPng = icons_namespaceObject["gear.png"];
   },
   props: ['common', 'values', 'decimalPlace', 'grid_id', 'meta_props', 'legendDecimal', 'showTitleChartLegend', 'isOverlayCollapsed', 'collpaseButton'],
   computed: {
+    isButtonvisible: function isButtonvisible() {
+      return this.grid_id == 0 && this.collpaseButton && this.indicators.length > 0;
+    },
     isIndicatorVisible: function isIndicatorVisible() {
       if (this.grid_id == 0 && this.collpaseButton) {
         return !this.isOverlayCollapsed;
@@ -12366,9 +12369,9 @@ var settingPng = icons_namespaceObject["gear.png"];
 });
 ;// ./src/components/Legend.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Legendvue_type_script_lang_js = (Legendvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=5b57de01&prod&lang=css
-var Legendvue_type_style_index_0_id_5b57de01_prod_lang_css = __webpack_require__(419);
-;// ./src/components/Legend.vue?vue&type=style&index=0&id=5b57de01&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Legend.vue?vue&type=style&index=0&id=c87713d4&prod&lang=css
+var Legendvue_type_style_index_0_id_c87713d4_prod_lang_css = __webpack_require__(589);
+;// ./src/components/Legend.vue?vue&type=style&index=0&id=c87713d4&prod&lang=css
 
 ;// ./src/components/Legend.vue
 
@@ -12381,8 +12384,8 @@ var Legendvue_type_style_index_0_id_5b57de01_prod_lang_css = __webpack_require__
 
 var Legend_component = normalizeComponent(
   components_Legendvue_type_script_lang_js,
-  Legendvue_type_template_id_5b57de01_render,
-  Legendvue_type_template_id_5b57de01_staticRenderFns,
+  Legendvue_type_template_id_c87713d4_render,
+  Legendvue_type_template_id_c87713d4_staticRenderFns,
   false,
   null,
   null,

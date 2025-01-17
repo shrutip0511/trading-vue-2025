@@ -1,7 +1,7 @@
 <template>
     <div class="trading-vue-legend" :style="calc_style">
 
-        <div v-if="(grid_id === 0 && collpaseButton && !showTitleChartLegend)" class="trading-vue-ohlcv"
+        <div v-if="(grid_id === 0 && !showTitleChartLegend)" class="trading-vue-ohlcv"
             :style="{ 'max-width': common.width + 'px' }">
             <template v-if="common?.showLegendPropsData && common.showLegendPropsData.length">
                 <b v-for="(n, i) in common.showLegendPropsData" :key="i">{{ n.k }} : {{ n.v }}&nbsp;</b><br />
@@ -36,7 +36,7 @@
       </legend-button> -->
         </div>
         <button type="button" class="p-button p-component p-button-sm collapse-btn"
-            v-if="(grid_id === 0 && isOverlayCollapsed)" @click="collapse_button_click(false)" style="cursor: pointer;pointer-events: all;">
+            v-if="(isButtonvisible && isOverlayCollapsed)" @click="collapse_button_click(false)" style="cursor: pointer;pointer-events: all;">
 
             <span class="pi pi-angle-down p-button-icon p-button-icon-left"></span>
             <span class="p-button-label">{{ this.indicators.length }}</span>
@@ -61,7 +61,7 @@
                 </spinner>
             </transition>
         </div>
-        <button type="button" class="p-button p-component p-button-sm collapse-btn" v-if="(grid_id === 0 && collpaseButton && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;pointer-events: all;">
+        <button type="button" class="p-button p-component p-button-sm collapse-btn" v-if="(isButtonvisible && !isOverlayCollapsed)" @click="collapse_button_click(true)" style="cursor: pointer;pointer-events: all;">
 
             <span class="pi pi-angle-up p-button-icon"></span>
         </button>
@@ -82,8 +82,11 @@ export default {
         'common', 'values', 'decimalPlace', 'grid_id', 'meta_props', 'legendDecimal', 'showTitleChartLegend', 'isOverlayCollapsed', 'collpaseButton'
     ],
     computed: {
+        isButtonvisible(){
+            return (this.grid_id == 0 && this.collpaseButton && this.indicators.length > 0)
+        },
         isIndicatorVisible() {
-            if (this.grid_id == 0 && this.collpaseButton) {
+            if (this.grid_id == 0 && this.collpaseButton ) {
                 return !this.isOverlayCollapsed
             }
             return true
