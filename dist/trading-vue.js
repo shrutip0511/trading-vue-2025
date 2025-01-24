@@ -10198,7 +10198,8 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
         if (_this.collisions.some(function (f) {
           return f(_this.mouse.x, _this.mouse.y);
         })) {
-          console.log("show pins");
+          console.log("show pins", _this.$props, _this.ctx);
+          _this.mouse.mode = 'pointer';
           _this.show_pins = true;
         } else {
           _this.show_pins = false;
