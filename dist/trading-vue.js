@@ -7373,16 +7373,20 @@ var Grid = /*#__PURE__*/function () {
       overlays.sort(function (l1, l2) {
         return l1.z - l2.z;
       });
+      console.log("during draw prop", overlays, overlays.map(function (x) {
+        return x.renderer.show_pins;
+      }));
       overlays.forEach(function (l) {
         if (!l.display) return;
         _this4.ctx.save();
         var r = l.renderer;
-        console.log("during draw prop", r.show_pins, l, _this4.ctx.canvas.style.cursor);
-        if (r.show_pins === true) {
-          _this4.ctx.canvas.style.cursor = 'pointer';
-        } else {
-          _this4.ctx.canvas.style.cursor = 'default';
-        }
+        // console.log("during draw prop", r.show_pins,l,this.ctx.canvas.style.cursor,);
+        // if (r.show_pins === true) {
+        //   this.ctx.canvas.style.cursor = 'pointer'
+        // }
+        // else{
+        //   this.ctx.canvas.style.cursor = 'default'
+        // }
         if (r.pre_draw) r.pre_draw(_this4.ctx);
         r.draw(_this4.ctx);
         if (r.post_draw) r.post_draw(_this4.ctx);
