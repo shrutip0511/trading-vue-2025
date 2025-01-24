@@ -7373,11 +7373,6 @@ var Grid = /*#__PURE__*/function () {
       overlays.sort(function (l1, l2) {
         return l1.z - l2.z;
       });
-      console.log("during draw prop", overlays.map(function (x) {
-        return x.renderer.drag;
-      }).some(function (y) {
-        return y != null || y != undefined;
-      }));
       if (overlays.map(function (x) {
         return x.renderer.drag;
       }).some(function (y) {
