@@ -5766,7 +5766,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
   },
   // Default cursor mode
   xmode: function xmode() {
-    return this.is_mobile ? 'explore' : 'default';
+    return this.is_mobile ? 'explore' : 'pointer';
   },
   default_prevented: function default_prevented(event) {
     if (event.original) {
