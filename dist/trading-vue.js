@@ -7379,6 +7379,12 @@ var Grid = /*#__PURE__*/function () {
         return y != null || y != undefined;
       }));
       if (overlays.map(function (x) {
+        return x.renderer.drag;
+      }).some(function (y) {
+        return y != null || y != undefined;
+      })) {
+        this.ctx.canvas.style.cursor = 'grabbing';
+      } else if (overlays.map(function (x) {
         return x.renderer.show_pins;
       }).some(function (y) {
         return y === true;
