@@ -7380,17 +7380,20 @@ var Grid = /*#__PURE__*/function () {
       }).some(function (y) {
         return y === true;
       }));
+      if (overlays.map(function (x) {
+        return x.renderer.show_pins;
+      }).some(function (y) {
+        return y === true;
+      })) {
+        this.ctx.canvas.style.cursor = 'pointer';
+      } else {
+        this.ctx.canvas.style.cursor = 'default';
+      }
       overlays.forEach(function (l) {
         if (!l.display) return;
         _this4.ctx.save();
         var r = l.renderer;
         // console.log("during draw prop", r.show_pins,l,this.ctx.canvas.style.cursor,);
-        // if (r.show_pins === true) {
-        //   this.ctx.canvas.style.cursor = 'pointer'
-        // }
-        // else{
-        //   this.ctx.canvas.style.cursor = 'default'
-        // }
         if (r.pre_draw) r.pre_draw(_this4.ctx);
         r.draw(_this4.ctx);
         if (r.post_draw) r.post_draw(_this4.ctx);
