@@ -306,11 +306,11 @@ export default class Grid {
     overlays.sort((l1, l2) => l1.z - l2.z);
 
     overlays.forEach((l) => {
-      console.log("during draw prop", l, this.$p);
-
+      
       if (!l.display) return;
       this.ctx.save();
       let r = l.renderer;
+      console.log("during draw prop", r.show_pins, r);
       if (r.pre_draw) r.pre_draw(this.ctx);
       r.draw(this.ctx);
       if (r.post_draw) r.post_draw(this.ctx);
