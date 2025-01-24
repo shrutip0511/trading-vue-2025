@@ -304,7 +304,7 @@ export default class Grid {
 
     // z-index sorting
     overlays.sort((l1, l2) => l1.z - l2.z);
-    console.log("during draw prop", overlays, overlays.map(x => x.renderer.show_pins), overlays.map(x => x.renderer.show_pins).some(y => y.renderer.show_pins === true));
+    console.log("during draw prop", overlays, overlays.map(x => x.renderer.show_pins), overlays.map(x => x.renderer.show_pins).some(y => y?.renderer?.show_pins === true));
 
     overlays.forEach((l) => {
 
