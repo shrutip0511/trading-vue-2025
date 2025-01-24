@@ -7373,6 +7373,11 @@ var Grid = /*#__PURE__*/function () {
       overlays.sort(function (l1, l2) {
         return l1.z - l2.z;
       });
+      console.log("during draw prop", overlays.map(function (x) {
+        return x.renderer.drag;
+      }).some(function (y) {
+        return y != null || y != undefined;
+      }));
       if (overlays.map(function (x) {
         return x.renderer.show_pins;
       }).some(function (y) {
@@ -7386,7 +7391,7 @@ var Grid = /*#__PURE__*/function () {
         if (!l.display) return;
         _this4.ctx.save();
         var r = l.renderer;
-        console.log("during draw prop", r.drag, l);
+        // console.log("during draw prop", r.drag, l);
         if (r.pre_draw) r.pre_draw(_this4.ctx);
         r.draw(_this4.ctx);
         if (r.post_draw) r.post_draw(_this4.ctx);

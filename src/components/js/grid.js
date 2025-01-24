@@ -304,6 +304,7 @@ export default class Grid {
 
     // z-index sorting
     overlays.sort((l1, l2) => l1.z - l2.z);
+    console.log("during draw prop",overlays.map(x => x.renderer.drag).some(y => y != null || y != undefined));
     
     if (overlays.map(x => x.renderer.show_pins).some(y => y === true)) {
       this.ctx.canvas.style.cursor = 'pointer'
@@ -316,7 +317,7 @@ export default class Grid {
       if (!l.display) return;
       this.ctx.save();
       let r = l.renderer;
-      console.log("during draw prop", r.drag, l);
+      // console.log("during draw prop", r.drag, l);
       if (r.pre_draw) r.pre_draw(this.ctx);
       r.draw(this.ctx);
       if (r.post_draw) r.post_draw(this.ctx);
