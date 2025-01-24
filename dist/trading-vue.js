@@ -7374,6 +7374,7 @@ var Grid = /*#__PURE__*/function () {
         return l1.z - l2.z;
       });
       overlays.forEach(function (l) {
+        console.log("during draw prop", l, _this4.$p);
         if (!l.display) return;
         _this4.ctx.save();
         var r = l.renderer;
