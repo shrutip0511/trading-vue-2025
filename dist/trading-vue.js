@@ -5766,7 +5766,7 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
   },
   // Default cursor mode
   xmode: function xmode() {
-    return this.is_mobile ? 'explore' : 'pointer';
+    return this.is_mobile ? 'explore' : 'default';
   },
   default_prevented: function default_prevented(event) {
     if (event.original) {
@@ -8525,7 +8525,7 @@ var Mouse = /*#__PURE__*/function () {
     });
     this.exec_script();
     this.mouse = new Mouse(this);
-    console.log("init_tool", this.$props.cursor);
+    console.log("init_tool", this.ctx);
     if (this.init_tool) this.init_tool();
     if (this.init) this.init();
   },

@@ -313,7 +313,7 @@ export default {
 
     // Default cursor mode
     xmode() {
-        return this.is_mobile ? 'explore' : 'pointer'
+        return this.is_mobile ? 'explore' : 'default'
     },
 
     default_prevented(event) {
