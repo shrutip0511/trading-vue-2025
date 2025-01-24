@@ -7375,6 +7375,10 @@ var Grid = /*#__PURE__*/function () {
       });
       console.log("during draw prop", overlays, overlays.map(function (x) {
         return x.renderer.show_pins;
+      }), overlays.map(function (x) {
+        return x.renderer.show_pins;
+      }).some(function (y) {
+        return y.renderer.show_pins === true;
       }));
       overlays.forEach(function (l) {
         if (!l.display) return;
