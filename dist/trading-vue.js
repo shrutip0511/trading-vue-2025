@@ -7378,8 +7378,7 @@ var Grid = /*#__PURE__*/function () {
       }), overlays.map(function (x) {
         return x.renderer.show_pins;
       }).some(function (y) {
-        var _y$renderer;
-        return (y === null || y === void 0 || (_y$renderer = y.renderer) === null || _y$renderer === void 0 ? void 0 : _y$renderer.show_pins) === true;
+        return y === true;
       }));
       overlays.forEach(function (l) {
         if (!l.display) return;
