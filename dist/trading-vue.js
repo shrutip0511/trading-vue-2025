@@ -7373,13 +7373,6 @@ var Grid = /*#__PURE__*/function () {
       overlays.sort(function (l1, l2) {
         return l1.z - l2.z;
       });
-      console.log("during draw prop", overlays, overlays.map(function (x) {
-        return x.renderer.show_pins;
-      }), overlays.map(function (x) {
-        return x.renderer.show_pins;
-      }).some(function (y) {
-        return y === true;
-      }));
       if (overlays.map(function (x) {
         return x.renderer.show_pins;
       }).some(function (y) {
@@ -7533,6 +7526,7 @@ var Grid = /*#__PURE__*/function () {
   }, {
     key: "mousedrag",
     value: function mousedrag(x, y) {
+      console.log("mouse drag called");
       var dt = this.drug.t * (this.drug.x - x) / this.layout.width;
       var d$ = this.layout.$_hi - this.layout.$_lo;
       d$ *= (this.drug.y - y) / this.layout.height;
@@ -10216,7 +10210,6 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
         if (_this.collisions.some(function (f) {
           return f(_this.mouse.x, _this.mouse.y);
         })) {
-          console.log("show pins", _this.$props, _this.ctx);
           _this.mouse.mode = 'pointer';
           _this.show_pins = true;
         } else {

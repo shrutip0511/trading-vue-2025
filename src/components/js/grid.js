@@ -304,7 +304,6 @@ export default class Grid {
 
     // z-index sorting
     overlays.sort((l1, l2) => l1.z - l2.z);
-    console.log("during draw prop", overlays, overlays.map(x => x.renderer.show_pins), overlays.map(x => x.renderer.show_pins).some(y => y === true));
 
     if (overlays.map(x => x.renderer.show_pins).some(y => y === true)) {
       this.ctx.canvas.style.cursor = 'pointer'
@@ -442,6 +441,8 @@ export default class Grid {
   }
 
   mousedrag(x, y) {
+    console.log("mouse drag called");
+    
     let dt = (this.drug.t * (this.drug.x - x)) / this.layout.width;
 
     let d$ = this.layout.$_hi - this.layout.$_lo;

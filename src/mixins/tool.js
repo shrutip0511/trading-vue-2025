@@ -14,7 +14,6 @@ export default {
                 if (this.collisions.some(f => f(
                     this.mouse.x, this.mouse.y,
                 ))) {
-                    console.log("show pins", this.$props, this.ctx);
                     this.mouse.mode = 'pointer'
                     this.show_pins = true
                 } else {
