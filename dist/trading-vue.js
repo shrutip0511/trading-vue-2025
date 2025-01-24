@@ -8525,6 +8525,7 @@ var Mouse = /*#__PURE__*/function () {
     });
     this.exec_script();
     this.mouse = new Mouse(this);
+    console.log("init_tool", this.$props.cursor);
     if (this.init_tool) this.init_tool();
     if (this.init) this.init();
   },
