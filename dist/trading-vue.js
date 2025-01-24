@@ -7386,7 +7386,7 @@ var Grid = /*#__PURE__*/function () {
         if (!l.display) return;
         _this4.ctx.save();
         var r = l.renderer;
-        console.log("during draw prop", r, l);
+        console.log("during draw prop", r.drag, l);
         if (r.pre_draw) r.pre_draw(_this4.ctx);
         r.draw(_this4.ctx);
         if (r.post_draw) r.post_draw(_this4.ctx);
