@@ -80,6 +80,8 @@ export default {
     },
     methods: {
         selected(tool) {
+            console.log("toolbar custom-event");
+            
             this.$emit('custom-event', {
                 event:'tool-selected', args: [tool.type]
             })

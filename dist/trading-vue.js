@@ -527,7 +527,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 583:
+/***/ 290:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -541,7 +541,7 @@ module.exports = exports;
 
 /***/ }),
 
-/***/ 208:
+/***/ 145:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4349,37 +4349,37 @@ if(false) {}
 
 /***/ }),
 
-/***/ 928:
+/***/ 141:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(583);
+var content = __webpack_require__(290);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("84d4e530", content, false, {});
+var update = add("1a6ed1dd", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
 /***/ }),
 
-/***/ 395:
+/***/ 214:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(208);
+var content = __webpack_require__(145);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("413e01f6", content, false, {});
+var update = add("4f4f9f1b", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -14178,8 +14178,8 @@ var Chart_component = normalizeComponent(
 )
 
 /* harmony default export */ const Chart = (Chart_component.exports);
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Toolbar.vue?vue&type=template&id=320099a6
-var Toolbarvue_type_template_id_320099a6_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Toolbar.vue?vue&type=template&id=6c4a7b60
+var Toolbarvue_type_template_id_6c4a7b60_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -14203,13 +14203,13 @@ var Toolbarvue_type_template_id_320099a6_render = function render() {
     }) : _vm._e();
   }), 1);
 };
-var Toolbarvue_type_template_id_320099a6_staticRenderFns = [];
-Toolbarvue_type_template_id_320099a6_render._withStripped = true;
+var Toolbarvue_type_template_id_6c4a7b60_staticRenderFns = [];
+Toolbarvue_type_template_id_6c4a7b60_render._withStripped = true;
 
-;// ./src/components/Toolbar.vue?vue&type=template&id=320099a6
+;// ./src/components/Toolbar.vue?vue&type=template&id=6c4a7b60
 
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ToolbarItem.vue?vue&type=template&id=5ce1aaa3
-var ToolbarItemvue_type_template_id_5ce1aaa3_render = function render() {
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ToolbarItem.vue?vue&type=template&id=5f48e326
+var ToolbarItemvue_type_template_id_5f48e326_render = function render() {
   var _vm = this,
     _c = _vm._self._c;
   return _c('div', {
@@ -14250,10 +14250,10 @@ var ToolbarItemvue_type_template_id_5ce1aaa3_render = function render() {
     }
   }) : _vm._e()], 1);
 };
-var ToolbarItemvue_type_template_id_5ce1aaa3_staticRenderFns = [];
-ToolbarItemvue_type_template_id_5ce1aaa3_render._withStripped = true;
+var ToolbarItemvue_type_template_id_5f48e326_staticRenderFns = [];
+ToolbarItemvue_type_template_id_5f48e326_render._withStripped = true;
 
-;// ./src/components/ToolbarItem.vue?vue&type=template&id=5ce1aaa3
+;// ./src/components/ToolbarItem.vue?vue&type=template&id=5f48e326
 
 ;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ItemList.vue?vue&type=template&id=75847764
 var ItemListvue_type_template_id_75847764_render = function render() {
@@ -14487,13 +14487,16 @@ var ItemList_component = normalizeComponent(
       //if (Utils.is_mobile && src === 'click') return
       // TODO: double firing
       if (!this.data.group) {
+        console.log("item-selected 1");
         this.$emit('item-selected', this.data);
       } else {
         var item = this.sub_item || this.data.items[0];
+        console.log("item-selected 2");
         this.$emit('item-selected', item);
       }
     },
     emit_selected_sub: function emit_selected_sub(item) {
+      console.log("item-selected 3");
       this.$emit('item-selected', item);
       this.sub_item = item;
     },
@@ -14509,9 +14512,9 @@ var ItemList_component = normalizeComponent(
 });
 ;// ./src/components/ToolbarItem.vue?vue&type=script&lang=js
  /* harmony default export */ const components_ToolbarItemvue_type_script_lang_js = (ToolbarItemvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ToolbarItem.vue?vue&type=style&index=0&id=5ce1aaa3&prod&lang=css
-var ToolbarItemvue_type_style_index_0_id_5ce1aaa3_prod_lang_css = __webpack_require__(395);
-;// ./src/components/ToolbarItem.vue?vue&type=style&index=0&id=5ce1aaa3&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/ToolbarItem.vue?vue&type=style&index=0&id=5f48e326&prod&lang=css
+var ToolbarItemvue_type_style_index_0_id_5f48e326_prod_lang_css = __webpack_require__(214);
+;// ./src/components/ToolbarItem.vue?vue&type=style&index=0&id=5f48e326&prod&lang=css
 
 ;// ./src/components/ToolbarItem.vue
 
@@ -14524,8 +14527,8 @@ var ToolbarItemvue_type_style_index_0_id_5ce1aaa3_prod_lang_css = __webpack_requ
 
 var ToolbarItem_component = normalizeComponent(
   components_ToolbarItemvue_type_script_lang_js,
-  ToolbarItemvue_type_template_id_5ce1aaa3_render,
-  ToolbarItemvue_type_template_id_5ce1aaa3_staticRenderFns,
+  ToolbarItemvue_type_template_id_5f48e326_render,
+  ToolbarItemvue_type_template_id_5f48e326_staticRenderFns,
   false,
   null,
   null,
@@ -14614,6 +14617,7 @@ function Toolbarvue_type_script_lang_js_arrayLikeToArray(r, a) { (null == a || a
   mounted: function mounted() {},
   methods: {
     selected: function selected(tool) {
+      console.log("toolbar custom-event");
       this.$emit('custom-event', {
         event: 'tool-selected',
         args: [tool.type]
@@ -14636,9 +14640,9 @@ function Toolbarvue_type_script_lang_js_arrayLikeToArray(r, a) { (null == a || a
 });
 ;// ./src/components/Toolbar.vue?vue&type=script&lang=js
  /* harmony default export */ const components_Toolbarvue_type_script_lang_js = (Toolbarvue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Toolbar.vue?vue&type=style&index=0&id=320099a6&prod&lang=css
-var Toolbarvue_type_style_index_0_id_320099a6_prod_lang_css = __webpack_require__(928);
-;// ./src/components/Toolbar.vue?vue&type=style&index=0&id=320099a6&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/Toolbar.vue?vue&type=style&index=0&id=6c4a7b60&prod&lang=css
+var Toolbarvue_type_style_index_0_id_6c4a7b60_prod_lang_css = __webpack_require__(141);
+;// ./src/components/Toolbar.vue?vue&type=style&index=0&id=6c4a7b60&prod&lang=css
 
 ;// ./src/components/Toolbar.vue
 
@@ -14651,8 +14655,8 @@ var Toolbarvue_type_style_index_0_id_320099a6_prod_lang_css = __webpack_require_
 
 var Toolbar_component = normalizeComponent(
   components_Toolbarvue_type_script_lang_js,
-  Toolbarvue_type_template_id_320099a6_render,
-  Toolbarvue_type_template_id_320099a6_staticRenderFns,
+  Toolbarvue_type_template_id_6c4a7b60_render,
+  Toolbarvue_type_template_id_6c4a7b60_staticRenderFns,
   false,
   null,
   null,

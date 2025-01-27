@@ -134,13 +134,19 @@ export default {
             //if (Utils.is_mobile && src === 'click') return
             // TODO: double firing
             if (!this.data.group) {
+                console.log("item-selected 1");
+                
                 this.$emit('item-selected', this.data)
             } else {
                 let item = this.sub_item || this.data.items[0]
+                console.log("item-selected 2");
+                
                 this.$emit('item-selected', item)
             }
         },
         emit_selected_sub(item) {
+            console.log("item-selected 3");
+            
             this.$emit('item-selected', item)
             this.sub_item = item
         },
