@@ -10402,6 +10402,7 @@ var Pin = /*#__PURE__*/function () {
         case 'tracking':
           break;
         case 'dragging':
+          console.log("pin dragging");
           if (!this.moved) this.draw_circle(ctx);
           break;
         case 'settled':

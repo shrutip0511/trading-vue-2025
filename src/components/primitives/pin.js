@@ -54,6 +54,8 @@ export default class Pin {
             case 'tracking':
                 break
             case 'dragging':
+                console.log("pin dragging");
+                
                 if (!this.moved) this.draw_circle(ctx)
                 break
             case 'settled':
@@ -63,7 +65,7 @@ export default class Pin {
     }
 
     draw_circle(ctx) {
-
+        
         this.layout = this.comp.layout
         if (this.comp.selected) {
             var r = this.RADIUS, lw = 1.5
