@@ -428,7 +428,7 @@ export default {
         // If the data object is DataCube
         if (d.event == 'change-settings') {
           
-          console.log("change-settings in lib4", d.args);
+          console.log("change-settings in lib4", d.args, this.selected);
         }
 
         

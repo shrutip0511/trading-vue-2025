@@ -387,7 +387,7 @@ module.exports.isSortableArrayLike = function (o) {
 
 /***/ }),
 
-/***/ 401:
+/***/ 915:
 /***/ ((module, exports, __webpack_require__) => {
 
 // Imports
@@ -4169,19 +4169,19 @@ if (true) {
 
 /***/ }),
 
-/***/ 902:
+/***/ 564:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(401);
+var content = __webpack_require__(915);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = (__webpack_require__(534)/* ["default"] */ .A)
-var update = add("579a78ae", content, false, {});
+var update = add("04e6d955", content, false, {});
 // Hot Module Replacement
 if(false) {}
 
@@ -5127,7 +5127,7 @@ __webpack_require__.d(__webpack_exports__, {
   primitives: () => (/* binding */ primitives)
 });
 
-;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=13eb45c8
+;// ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=template&id=3a7acd5e
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
@@ -5208,7 +5208,7 @@ var render = function render() {
 var staticRenderFns = [];
 render._withStripped = true;
 
-;// ./src/TradingVue.vue?vue&type=template&id=13eb45c8
+;// ./src/TradingVue.vue?vue&type=template&id=3a7acd5e
 
 ;// ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function _arrayLikeToArray(r, a) {
@@ -8582,15 +8582,21 @@ var Mouse = /*#__PURE__*/function () {
       // the root of evil is in (1)
       if (event === 'custom-event') return;
       if (event == 'change-settings') {
+        this._$emit('custom-event', {
+          event: event,
+          args: args,
+          selected: this.selected
+        });
         console.log('custom_event from overlay', {
           event: event,
           args: args
         }, this.$props, this.selected);
+      } else {
+        this._$emit('custom-event', {
+          event: event,
+          args: args
+        });
       }
-      this._$emit('custom-event', {
-        event: event,
-        args: args
-      });
     },
     // TODO: the event is not firing when the same
     // overlay type is added to the offchart[]
@@ -15426,7 +15432,7 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(r, a) { (null == a |
       if (data.tv) {
         // If the data object is DataCube
         if (d.event == 'change-settings') {
-          console.log("change-settings in lib4", d.args);
+          console.log("change-settings in lib4", d.args, this.selected);
         }
         data.on_custom_event(d.event, d.args);
       }
@@ -15509,9 +15515,9 @@ function TradingVuevue_type_script_lang_js_arrayLikeToArray(r, a) { (null == a |
 });
 ;// ./src/TradingVue.vue?vue&type=script&lang=js
  /* harmony default export */ const src_TradingVuevue_type_script_lang_js = (TradingVuevue_type_script_lang_js); 
-// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=13eb45c8&prod&lang=css
-var TradingVuevue_type_style_index_0_id_13eb45c8_prod_lang_css = __webpack_require__(902);
-;// ./src/TradingVue.vue?vue&type=style&index=0&id=13eb45c8&prod&lang=css
+// EXTERNAL MODULE: ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/TradingVue.vue?vue&type=style&index=0&id=3a7acd5e&prod&lang=css
+var TradingVuevue_type_style_index_0_id_3a7acd5e_prod_lang_css = __webpack_require__(564);
+;// ./src/TradingVue.vue?vue&type=style&index=0&id=3a7acd5e&prod&lang=css
 
 ;// ./src/TradingVue.vue
 
