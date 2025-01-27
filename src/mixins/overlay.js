@@ -109,7 +109,7 @@ export default {
             if (event === 'custom-event') return
             if (event == 'change-settings') {
                 
-                console.log('custom_event from overlay',{event, args}, this.$props)
+                console.log('custom_event from overlay',{event, args}, this.$props, this.selected)
             }
             this._$emit('custom-event', {event, args})
         },

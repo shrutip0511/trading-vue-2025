@@ -8585,7 +8585,7 @@ var Mouse = /*#__PURE__*/function () {
         console.log('custom_event from overlay', {
           event: event,
           args: args
-        }, this.$props);
+        }, this.$props, this.selected);
       }
       this._$emit('custom-event', {
         event: event,
