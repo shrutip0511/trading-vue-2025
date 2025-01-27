@@ -10252,6 +10252,7 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
       }
     },
     set_state: function set_state(name) {
+      console.log("change-settings in lib2", this.selected);
       this.$emit('change-settings', {
         $state: name
       });
@@ -10453,7 +10454,7 @@ var Pin = /*#__PURE__*/function () {
       //if (this.layout.ti_map.ib) {
       //    this.t = this.layout.ti_map.i2t(this.t )
       //}
-
+      console.log("change-settings in lib1", this.selected);
       if (emit) this.comp.$emit('change-settings', _defineProperty({}, this.name, [this.t, this.y$]));
     }
   }, {

@@ -117,7 +117,7 @@ export default class Pin {
         //if (this.layout.ti_map.ib) {
         //    this.t = this.layout.ti_map.i2t(this.t )
         //}
-
+        console.log("change-settings in lib1", this.selected);
         if (emit) this.comp.$emit('change-settings', {
              [this.name]: [this.t, this.y$]
         })
