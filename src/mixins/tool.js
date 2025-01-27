@@ -30,7 +30,7 @@ export default {
                         this.$emit('object-selected')
                     }
                     console.log("start_drag", this.selected);
-                    
+
                     this.start_drag()
                     e.preventDefault()
                     this.pins.forEach(x => x.mousedown(e, true))
@@ -55,7 +55,7 @@ export default {
         },
         set_state(name) {
             this.$emit('change-settings', {
-                 $state: name
+                $state: name
             })
         },
         watch_uuid(n, p) {
@@ -88,12 +88,14 @@ export default {
         },
         drag_update() {
             console.log("drag_update", this.selected);
-            
-            let dt = this.$props.cursor.t - this.drag.t
-            let dy = this.$props.cursor.y$ - this.drag.y$
-            this.pins.forEach(x => x.update_from(
-                [x.t1 + dt, x.y$1 + dy], true
-            ))
+            if (this.selected) {
+                let dt = this.$props.cursor.t - this.drag.t
+                let dy = this.$props.cursor.y$ - this.drag.y$
+
+                this.pins.forEach(x => x.update_from(
+                    [x.t1 + dt, x.y$1 + dy], true
+                ))
+            }
         }
     },
     computed: {
