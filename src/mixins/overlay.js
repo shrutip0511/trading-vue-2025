@@ -83,6 +83,8 @@ export default {
             }`)
         },
         custom_event(event, ...args) {
+            console.log("custom_event from overlay");
+            
             if (event.split(':')[0] === 'hook') return
             if (event === 'change-settings' ||
                 event === 'object-selected' ||
