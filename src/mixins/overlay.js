@@ -107,7 +107,10 @@ export default {
             // TODO(2): this prevents call overflow, but
             // the root of evil is in (1)
             if (event === 'custom-event') return
-            console.log('custom_event from overlay',{event, args})
+            if (event == 'change-settings') {
+                
+                console.log('custom_event from overlay',{event, args}, this.$props)
+            }
             this._$emit('custom-event', {event, args})
         },
         // TODO: the event is not firing when the same

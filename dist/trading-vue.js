@@ -8581,10 +8581,12 @@ var Mouse = /*#__PURE__*/function () {
       // TODO(2): this prevents call overflow, but
       // the root of evil is in (1)
       if (event === 'custom-event') return;
-      console.log('custom_event from overlay', {
-        event: event,
-        args: args
-      });
+      if (event == 'change-settings') {
+        console.log('custom_event from overlay', {
+          event: event,
+          args: args
+        }, this.$props);
+      }
       this._$emit('custom-event', {
         event: event,
         args: args
