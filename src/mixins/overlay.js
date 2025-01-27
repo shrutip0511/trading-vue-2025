@@ -83,7 +83,7 @@ export default {
             }`)
         },
         custom_event(event, ...args) {
-            // console.log("custom_event from overlay");
+            console.log("custom_event from overlay", args);
 
             if (event.split(':')[0] === 'hook') return
             if (event === 'change-settings' ||
@@ -108,12 +108,11 @@ export default {
             // the root of evil is in (1)
             if (event === 'custom-event') return
             if (event == 'change-settings') {
-
-                this._$emit('custom-event', { event, args, selected: this.selected })
+                args[0].selected = this.selected
+                // this._$emit('custom-event', { event, args, selected: this.selected })
                 console.log('custom_event from overlay', { event, args }, this.$props, this.selected)
-            } else {
-                this._$emit('custom-event', { event, args })
-            }
+            } 
+            this._$emit('custom-event', { event, args })
         },
         // TODO: the event is not firing when the same
         // overlay type is added to the offchart[]

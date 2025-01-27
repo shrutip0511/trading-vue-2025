@@ -8560,12 +8560,11 @@ var Mouse = /*#__PURE__*/function () {
       console.warn("Format: meta_info() {\n                author: 'Satoshi Smith',\n                version: '1.0.0',\n                contact (opt) '<email>'\n                github: (opt) '<GitHub Page>',\n            }");
     },
     custom_event: function custom_event(event) {
-      // console.log("custom_event from overlay");
-
-      if (event.split(':')[0] === 'hook') return;
       for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
         args[_key - 1] = arguments[_key];
       }
+      console.log("custom_event from overlay", args);
+      if (event.split(':')[0] === 'hook') return;
       if (event === 'change-settings' || event === 'object-selected' || event === 'new-shader' || event === 'new-interface' || event === 'remove-tool') {
         args.push(this.grid_id, this.id);
         if (this.$props.settings.$uuid) {
@@ -8582,21 +8581,17 @@ var Mouse = /*#__PURE__*/function () {
       // the root of evil is in (1)
       if (event === 'custom-event') return;
       if (event == 'change-settings') {
-        this._$emit('custom-event', {
-          event: event,
-          args: args,
-          selected: this.selected
-        });
+        args[0].selected = this.selected;
+        // this._$emit('custom-event', { event, args, selected: this.selected })
         console.log('custom_event from overlay', {
           event: event,
           args: args
         }, this.$props, this.selected);
-      } else {
-        this._$emit('custom-event', {
-          event: event,
-          args: args
-        });
       }
+      this._$emit('custom-event', {
+        event: event,
+        args: args
+      });
     },
     // TODO: the event is not firing when the same
     // overlay type is added to the offchart[]
