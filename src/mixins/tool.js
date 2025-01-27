@@ -91,9 +91,9 @@ export default {
             
             let dt = this.$props.cursor.t - this.drag.t
             let dy = this.$props.cursor.y$ - this.drag.y$
-            this.pins.forEach(x => x.update_from(
-                [x.t1 + dt, x.y$1 + dy], true
-            ))
+            // this.pins.forEach(x => x.update_from(
+            //     [x.t1 + dt, x.y$1 + dy], true
+            // ))
         }
     },
     computed: {
