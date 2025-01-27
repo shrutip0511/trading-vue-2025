@@ -8560,7 +8560,8 @@ var Mouse = /*#__PURE__*/function () {
       console.warn("Format: meta_info() {\n                author: 'Satoshi Smith',\n                version: '1.0.0',\n                contact (opt) '<email>'\n                github: (opt) '<GitHub Page>',\n            }");
     },
     custom_event: function custom_event(event) {
-      console.log("custom_event from overlay");
+      // console.log("custom_event from overlay");
+
       if (event.split(':')[0] === 'hook') return;
       for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
         args[_key - 1] = arguments[_key];
@@ -8580,7 +8581,10 @@ var Mouse = /*#__PURE__*/function () {
       // TODO(2): this prevents call overflow, but
       // the root of evil is in (1)
       if (event === 'custom-event') return;
-      // console.log('custom-event',{event, args})
+      console.log('custom_event from overlay', {
+        event: event,
+        args: args
+      });
       this._$emit('custom-event', {
         event: event,
         args: args

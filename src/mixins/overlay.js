@@ -83,7 +83,7 @@ export default {
             }`)
         },
         custom_event(event, ...args) {
-            console.log("custom_event from overlay");
+            // console.log("custom_event from overlay");
             
             if (event.split(':')[0] === 'hook') return
             if (event === 'change-settings' ||
@@ -107,7 +107,7 @@ export default {
             // TODO(2): this prevents call overflow, but
             // the root of evil is in (1)
             if (event === 'custom-event') return
-            // console.log('custom-event',{event, args})
+            console.log('custom_event from overlay',{event, args})
             this._$emit('custom-event', {event, args})
         },
         // TODO: the event is not firing when the same
