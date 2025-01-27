@@ -10302,12 +10302,12 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
       });
     },
     drag_update: function drag_update() {
-      console.log("drag_update");
+      console.log("drag_update", this.selected);
       var dt = this.$props.cursor.t - this.drag.t;
       var dy = this.$props.cursor.y$ - this.drag.y$;
-      // this.pins.forEach(x => x.update_from(
-      //     [x.t1 + dt, x.y$1 + dy], true
-      // ))
+      this.pins.forEach(function (x) {
+        return x.update_from([x.t1 + dt, x.y$1 + dy], true);
+      });
     }
   },
   computed: {
