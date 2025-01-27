@@ -29,7 +29,7 @@ export default {
             new Function('return ' + this.$emit)()
             this._$emit = this.$emit
             this.$emit = this.custom_event
-        } catch (e) {
+        } catch(e) {
             return
         }
 
@@ -38,9 +38,9 @@ export default {
             id: this.$props.id,
             renderer: this,
             display: 'display' in this.$props.settings ?
-                this.$props.settings['display'] : true,
+               this.$props.settings['display'] : true,
             z: this.$props.settings['z-index'] ||
-                this.$props.settings['zIndex'] || (main ? 0 : -1),
+               this.$props.settings['zIndex'] || (main ? 0 : -1),
         })
 
         // Overlay meta-props (adjusting behaviour)
@@ -65,7 +65,7 @@ export default {
             /* override it (mandatory) */
             console.warn('use_for() should be implemented')
             console.warn(
-                `Format: use_for() {
+            `Format: use_for() {
                   return ['type1', 'type2', ...]
             }`)
         },
@@ -75,7 +75,7 @@ export default {
             console.warn(
                 `${id} meta_info() is req. for publishing`)
             console.warn(
-                `Format: meta_info() {
+            `Format: meta_info() {
                 author: 'Satoshi Smith',
                 version: '1.0.0',
                 contact (opt) '<email>'
@@ -83,15 +83,13 @@ export default {
             }`)
         },
         custom_event(event, ...args) {
-            console.log("custom_event from overlay", args);
-
             if (event.split(':')[0] === 'hook') return
             if (event === 'change-settings' ||
                 event === 'object-selected' ||
                 event === 'new-shader' ||
                 event === 'new-interface' ||
                 event === 'remove-tool') {
-
+                
                 args.push(this.grid_id, this.id)
                 if (this.$props.settings.$uuid) {
                     args.push(this.$props.settings.$uuid)
@@ -107,12 +105,8 @@ export default {
             // TODO(2): this prevents call overflow, but
             // the root of evil is in (1)
             if (event === 'custom-event') return
-            if (event == 'change-settings') {
-                args[0].selected = this.selected
-                // this._$emit('custom-event', { event, args, selected: this.selected })
-                console.log('custom_event from overlay', { event, args }, this.$props, this.selected)
-            } 
-            this._$emit('custom-event', { event, args })
+            // console.log('custom-event',{event, args})
+            this._$emit('custom-event', {event, args})
         },
         // TODO: the event is not firing when the same
         // overlay type is added to the offchart[]
@@ -127,7 +121,7 @@ export default {
     },
     watch: {
         settings: {
-            handler: function (n, p) {
+            handler: function(n, p) {
                 // console.log('watch_uuid',this.watch_uuid,n)
                 if (this.watch_uuid) this.watch_uuid(n, p)
                 this._$emit('show-grid-layer', {

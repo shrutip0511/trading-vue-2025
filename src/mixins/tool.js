@@ -52,7 +52,6 @@ export default {
             }
         },
         set_state(name) {
-            console.log("change-settings in lib2", this.selected);
             this.$emit('change-settings', {
                  $state: name
             })

@@ -426,14 +426,7 @@ export default {
       if (ctrl) this.pre_dc(d);
       if (data.tv) {
         // If the data object is DataCube
-        if (d.event == 'change-settings') {
-          
-          console.log("change-settings in lib4", d.args, this.selected);
-        }
-        else{
-
-          data.on_custom_event(d.event, d.args);
-        }
+        data.on_custom_event(d.event, d.args);
       }
       if (ctrl) this.post_dc(d);
     },

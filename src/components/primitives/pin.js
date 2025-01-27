@@ -54,8 +54,6 @@ export default class Pin {
             case 'tracking':
                 break
             case 'dragging':
-                console.log("pin dragging");
-                
                 if (!this.moved) this.draw_circle(ctx)
                 break
             case 'settled':
@@ -65,7 +63,7 @@ export default class Pin {
     }
 
     draw_circle(ctx) {
-        
+
         this.layout = this.comp.layout
         if (this.comp.selected) {
             var r = this.RADIUS, lw = 1.5
@@ -98,8 +96,6 @@ export default class Pin {
         //}
 
         // Reset the settings attahed to the pin (position)
-        console.log("change-settings in lib", this.selected);
-        
         this.comp.$emit('change-settings', {
              [this.name]: [this.t, this.y$]
         })
@@ -119,7 +115,7 @@ export default class Pin {
         //if (this.layout.ti_map.ib) {
         //    this.t = this.layout.ti_map.i2t(this.t )
         //}
-        console.log("change-settings in lib1", this.selected);
+
         if (emit) this.comp.$emit('change-settings', {
              [this.name]: [this.t, this.y$]
         })

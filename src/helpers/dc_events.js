@@ -388,7 +388,6 @@ export default class DCEvents {
 
     // Apply new overlay settings
     change_settings(args) {
-        console.log("change-settings in lib3", args);
         let settings = args[0]
         delete settings.id
         let grid_id = args[1]
