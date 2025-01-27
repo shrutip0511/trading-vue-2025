@@ -430,9 +430,10 @@ export default {
           
           console.log("change-settings in lib4", d.args, this.selected);
         }
+        else{
 
-        
-        data.on_custom_event(d.event, d.args);
+          data.on_custom_event(d.event, d.args);
+        }
       }
       if (ctrl) this.post_dc(d);
     },
