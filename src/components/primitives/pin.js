@@ -96,6 +96,8 @@ export default class Pin {
         //}
 
         // Reset the settings attahed to the pin (position)
+        console.log("change-settings in lib", this.selected);
+        
         this.comp.$emit('change-settings', {
              [this.name]: [this.t, this.y$]
         })
