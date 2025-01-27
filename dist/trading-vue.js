@@ -16708,6 +16708,7 @@ var DCEvents = /*#__PURE__*/function () {
   }, {
     key: "change_settings",
     value: function change_settings(args) {
+      console.log("change-settings in lib3", this.selected);
       var settings = args[0];
       delete settings.id;
       var grid_id = args[1];
