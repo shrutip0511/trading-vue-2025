@@ -29,6 +29,8 @@ export default {
                     if (!this.selected) {
                         this.$emit('object-selected')
                     }
+                    console.log("start_drag", this.selected);
+                    
                     this.start_drag()
                     e.preventDefault()
                     this.pins.forEach(x => x.mousedown(e, true))
