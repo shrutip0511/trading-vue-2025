@@ -87,6 +87,8 @@ export default {
             this.pins.forEach(x => x.rec_position())
         },
         drag_update() {
+            console.log("drag_update");
+            
             let dt = this.$props.cursor.t - this.drag.t
             let dy = this.$props.cursor.y$ - this.drag.y$
             this.pins.forEach(x => x.update_from(
