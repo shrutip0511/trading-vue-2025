@@ -21,19 +21,19 @@
             <span v-if="!show_values" class="t-vue-lspan" :style="{ color: common.colors.text }">
                 {{ (common.meta.last || [])[4] }}
             </span>
-            <!-- <legend-button
-          v-if="show_Settings"
-          key="main_chart_settings"
-          id="main_settings"
-          :tv_id="grid_id"
-          :ov_id="common.chartType"
-          :grid_id="grid_id"
-          :index="grid_id"
-          :icon="settingIcon"
-          :config="{L_BTN_SIZE:21}"
-          @legend-button-click="button_click"
-      >
-      </legend-button> -->
+            <legend-button
+                v-if="show_Settings"
+                key="main_chart_settings"
+                id="main_settings"
+                :tv_id="grid_id"
+                :ov_id="common.chartType"
+                :grid_id="grid_id"
+                :index="grid_id"
+                :icon="settingIcon"
+                :config="{L_BTN_SIZE:21}"
+                @legend-button-click="button_click"
+            >
+      </legend-button>
         </div>
         <button type="button" class="p-button p-component p-button-sm collapse-btn"
             v-if="(isButtonvisible && isOverlayCollapsed)" @click="collapse_button_click(false)"
