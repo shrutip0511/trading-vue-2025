@@ -48,6 +48,7 @@ export default {
                     console.log("mousedown init tool text out if");
                     if (this.selected) {
                         console.log("mousedown init tool text in if");
+                        this.textEdit = true
                     }
 
                     //this.show_pins = true

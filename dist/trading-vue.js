@@ -10247,6 +10247,7 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
           console.log("mousedown init tool text out if");
           if (_this.selected) {
             console.log("mousedown init tool text in if");
+            _this.textEdit = true;
           }
 
           //this.show_pins = true
