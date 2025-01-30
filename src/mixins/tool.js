@@ -50,8 +50,13 @@ export default {
                         console.log("mousedown init tool text in if");
                         this.textEdit = true
                     }
+                    else{
+                        this.textEdit = false
+                    }
 
                     //this.show_pins = true
+                }else{
+                    this.textEdit = false
                 }
             })
             this.mouse.on('mouseup', e => {
