@@ -10210,6 +10210,7 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
       this.collisions = [];
       this.pins = [];
       this.textBound = [];
+      this.textEdit = false;
       this.mouse.on('mousemove', function (e) {
         if (_this.collisions.some(function (f) {
           return f(_this.mouse.x, _this.mouse.y);
@@ -10240,6 +10241,15 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
           _this.pins.forEach(function (x) {
             return x.mousedown(e, true);
           });
+        } else if (_this.textBound.some(function (f) {
+          return f(_this.mouse.x, _this.mouse.y);
+        })) {
+          console.log("mousedown init tool text out if");
+          if (_this.selected) {
+            console.log("mousedown init tool text in if");
+          }
+
+          //this.show_pins = true
         }
       });
       this.mouse.on('mouseup', function (e) {

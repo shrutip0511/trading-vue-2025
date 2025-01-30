@@ -11,6 +11,7 @@ export default {
             this.collisions = []
             this.pins = []
             this.textBound = []
+            this.textEdit = false
             this.mouse.on('mousemove', e => {
                 if (this.collisions.some(f => f(
                     this.mouse.x, this.mouse.y,
@@ -20,7 +21,7 @@ export default {
                     this.mouse.x, this.mouse.y,
                 ))) {
                     console.log("init tool text");
-                    
+
                     //this.show_pins = true
                 } else {
                     this.show_pins = false
@@ -41,6 +42,15 @@ export default {
                     this.start_drag()
                     e.preventDefault()
                     this.pins.forEach(x => x.mousedown(e, true))
+                } else if (this.textBound.some(f => f(
+                    this.mouse.x, this.mouse.y,
+                ))) {
+                    console.log("mousedown init tool text out if");
+                    if (this.selected) {
+                        console.log("mousedown init tool text in if");
+                    }
+
+                    //this.show_pins = true
                 }
             })
             this.mouse.on('mouseup', e => {
