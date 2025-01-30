@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.3 - Tue Jan 28 2025
+ * TradingVue.JS - v1.0.3 - Thu Jan 30 2025
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -10209,11 +10209,18 @@ function tool_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.len
       // Collision functions (float, float) => bool,
       this.collisions = [];
       this.pins = [];
+      this.textBound = [];
       this.mouse.on('mousemove', function (e) {
         if (_this.collisions.some(function (f) {
           return f(_this.mouse.x, _this.mouse.y);
         })) {
           _this.show_pins = true;
+        } else if (_this.textBound.some(function (f) {
+          return f(_this.mouse.x, _this.mouse.y);
+        })) {
+          console.log("init tool text");
+
+          //this.show_pins = true
         } else {
           _this.show_pins = false;
         }

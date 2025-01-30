@@ -10,11 +10,18 @@ export default {
             // Collision functions (float, float) => bool,
             this.collisions = []
             this.pins = []
+            this.textBound = []
             this.mouse.on('mousemove', e => {
                 if (this.collisions.some(f => f(
                     this.mouse.x, this.mouse.y,
                 ))) {
                     this.show_pins = true
+                } else if (this.textBound.some(f => f(
+                    this.mouse.x, this.mouse.y,
+                ))) {
+                    console.log("init tool text");
+                    
+                    //this.show_pins = true
                 } else {
                     this.show_pins = false
                 }
