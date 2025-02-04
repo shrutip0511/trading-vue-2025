@@ -21,19 +21,10 @@
             <span v-if="!show_values" class="t-vue-lspan" :style="{ color: common.colors.text }">
                 {{ (common.meta.last || [])[4] }}
             </span>
-            <legend-button
-                v-if="show_Settings"
-                key="main_chart_settings"
-                id="main_settings"
-                :tv_id="grid_id"
-                :ov_id="common.chartType"
-                :grid_id="grid_id"
-                :index="grid_id"
-                :icon="settingIcon"
-                :config="{L_BTN_SIZE:21}"
-                @legend-button-click="button_click"
-            >
-      </legend-button>
+            <legend-button v-if="show_Settings" key="main_chart_settings" id="main_settings" :tv_id="grid_id"
+                :ov_id="common.chartType" :grid_id="grid_id" :index="grid_id" :icon="settingIcon"
+                :config="{ L_BTN_SIZE: 21 }" @legend-button-click="button_click">
+            </legend-button>
         </div>
         <button type="button" class="p-button p-component p-button-sm collapse-btn"
             v-if="(isButtonvisible && isOverlayCollapsed)" @click="collapse_button_click(false)"
@@ -42,26 +33,29 @@
             <span class="pi pi-angle-down p-button-icon p-button-icon-left"></span>
             <span class="p-button-label">{{ this.indicators.length }}</span>
         </button>
-        <div v-for="ind in this.indicators" class="t-vue-ind" v-if="isIndicatorVisible">
-            <span class="t-vue-iname">{{ ind.name }}</span>
-            <button-group v-if="ind.showLegendButtons" :buttons="common.buttons" :config="common.config" :ov_id="ind.id"
-                :grid_id="grid_id" :index="ind.index" :tv_id="common.tv_id" :display="ind.v"
-                @legend-button-click="button_click">
-            </button-group>
-            <span v-if="ind.v" class="t-vue-ivalues">
-                <span v-for="v in ind.values" v-if="show_values" class="t-vue-lspan t-vue-ivalue"
-                    :style="{ color: v.color }">
-                    {{ v.value }}
+        <div class="overlay-title">
+            <div v-for="ind in this.indicators" class="t-vue-ind" v-if="isIndicatorVisible">
+                <span class="t-vue-iname">{{ ind.name }}</span>
+                <button-group v-if="ind.showLegendButtons" :buttons="common.buttons" :config="common.config"
+                    :ov_id="ind.id" :grid_id="grid_id" :index="ind.index" :tv_id="common.tv_id" :display="ind.v"
+                    @legend-button-click="button_click">
+                </button-group>
+                <span v-if="ind.v" class="t-vue-ivalues">
+                    <span v-for="v in ind.values" v-if="show_values" class="t-vue-lspan t-vue-ivalue"
+                        :style="{ color: v.color }">
+                        {{ v.value }}
+                    </span>
                 </span>
-            </span>
-            <span v-if="ind.unk" class="t-vue-unknown">
-                (Unknown type)
-            </span>
-            <transition name="tvjs-appear">
-                <spinner v-if="ind.loading" :colors="common.colors">
-                </spinner>
-            </transition>
+                <span v-if="ind.unk" class="t-vue-unknown">
+                    (Unknown type)
+                </span>
+                <transition name="tvjs-appear">
+                    <spinner v-if="ind.loading" :colors="common.colors">
+                    </spinner>
+                </transition>
+            </div>
         </div>
+
         <button type="button" class="p-button p-component p-button-sm collapse-btn"
             v-if="(isButtonvisible && !isOverlayCollapsed)" @click="collapse_button_click(true)"
             style="cursor: pointer;pointer-events: all;">
