@@ -6294,7 +6294,7 @@ function GridMaker(id, params, master_grid) {
     if (h < $p.config.GRIDY) return 1;
     var n = h / $p.config.GRIDY; // target grid N
     var yrange = self.$_hi;
-    console.log("dollar_mult_hi", self.$_lo);
+    console.log("dollar_mult_hi", self.$_lo, self.$_hi);
     if (self.$_lo > 0) {
       var yratio = self.$_hi / self.$_lo;
     } else {
