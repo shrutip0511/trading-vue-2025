@@ -5300,7 +5300,7 @@ var ChartConfig = {
   // %/100 of step
   GRIDX: 100,
   // px
-  GRIDY: 25,
+  GRIDY: 47,
   // px
   BOTBAR: 28,
   // px
