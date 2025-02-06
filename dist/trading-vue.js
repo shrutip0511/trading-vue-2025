@@ -6247,6 +6247,7 @@ function GridMaker(id, params, master_grid) {
     self.startx = (sub[0][0] - range[0]) * r;
 
     // Candle Y-transform: (A = scale, B = shift)
+    console.log("logscale 2");
     if (!grid.logScale) {
       self.A = -height / (self.$_hi - self.$_lo);
       self.B = -self.$_hi * self.A;
@@ -6529,6 +6530,7 @@ function GridMaker(id, params, master_grid) {
       calc_positions();
       grid_x();
       if (grid.logScale) {
+        console.log("logscale 3");
         grid_y_log();
       } else {
         grid_y();
@@ -7536,6 +7538,7 @@ var Grid = /*#__PURE__*/function () {
       d$ *= (this.drug.y - y) / this.layout.height;
       var offset = this.drug.o + d$;
       var ls = this.layout.grid.logScale;
+      console.log("logscale 1");
       if (ls && this.drug.y_r) {
         var dy = this.drug.y - y;
         var range = this.drug.y_r.slice();

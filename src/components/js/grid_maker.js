@@ -186,6 +186,7 @@ function GridMaker(id, params, master_grid = null) {
         self.startx = (sub[0][0] - range[0]) * r
 
         // Candle Y-transform: (A = scale, B = shift)
+        console.log("logscale 2");
         if (!grid.logScale) {
             self.A = - height / (self.$_hi - self.$_lo)
             self.B = - self.$_hi * self.A
@@ -506,6 +507,7 @@ function GridMaker(id, params, master_grid = null) {
             calc_positions()
             grid_x()
             if (grid.logScale) {
+                console.log("logscale 3");
                 grid_y_log()
             } else {
                 grid_y()

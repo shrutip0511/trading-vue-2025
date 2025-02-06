@@ -448,7 +448,8 @@ export default class Grid {
     let offset = this.drug.o + d$;
 
     let ls = this.layout.grid.logScale;
-
+    console.log("logscale 1");
+    
     if (ls && this.drug.y_r) {
       let dy = this.drug.y - y;
       var range = this.drug.y_r.slice();
