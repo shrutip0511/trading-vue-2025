@@ -45,7 +45,7 @@ const ChartConfig = {
     EXPAND: 0.15,    // %/100 of range
     CANDLEW: 0.6,    // %/100 of step
     GRIDX: 100,      // px
-    GRIDY: 100,       // px
+    GRIDY: 47,       // px
     BOTBAR: 28,      // px
     PANHEIGHT: 22,   // px
     DEFAULT_LEN: 50, // candles

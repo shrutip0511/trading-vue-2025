@@ -217,6 +217,8 @@ function GridMaker(id, params, master_grid = null) {
 
         // TODO: center the range (look at RSI for example,
         // it looks ugly when "80" is near the top)
+        console.log("steps range",Utils.strip(Utils.nearest_a(m, s)[1]));
+        
         return Utils.strip(Utils.nearest_a(m, s)[1])
     }
 

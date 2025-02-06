@@ -5300,7 +5300,7 @@ var ChartConfig = {
   // %/100 of step
   GRIDX: 100,
   // px
-  GRIDY: 100,
+  GRIDY: 47,
   // px
   BOTBAR: 28,
   // px
@@ -6278,6 +6278,7 @@ function GridMaker(id, params, master_grid) {
 
     // TODO: center the range (look at RSI for example,
     // it looks ugly when "80" is near the top)
+    console.log("steps range", utils.strip(utils.nearest_a(m, s)[1]));
     return utils.strip(utils.nearest_a(m, s)[1]);
   }
   function dollar_mult() {
