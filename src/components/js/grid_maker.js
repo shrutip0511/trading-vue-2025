@@ -415,10 +415,11 @@ function GridMaker(id, params, master_grid = null) {
         let q = 1 + (self.$_mult - 1) / 2
 
         // Over 0
+        console.log("logscale init", y1, self.$_mult);
         for (var y$ = y1; y$ > 0; y$ /= self.$_mult) {
             y$ = log_rounder(y$, q)
             let y = Math.floor(math.log(y$) * self.A + self.B)
-            console.log("logscale push");
+            console.log("logscale push", y$);
             
             self.ys.push([y, Utils.strip(y$)])
             if (y > height) break
