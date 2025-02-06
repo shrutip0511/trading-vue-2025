@@ -225,6 +225,8 @@ function GridMaker(id, params, master_grid = null) {
     function dollar_mult() {
         let mult_hi = dollar_mult_hi()
         let mult_lo = dollar_mult_lo()
+        console.log("dollar_mult", mult_hi, mult_lo);
+        
         return Math.max(mult_hi, mult_lo)
     }
 

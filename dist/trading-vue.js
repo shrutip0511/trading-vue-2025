@@ -6284,6 +6284,7 @@ function GridMaker(id, params, master_grid) {
   function dollar_mult() {
     var mult_hi = dollar_mult_hi();
     var mult_lo = dollar_mult_lo();
+    console.log("dollar_mult", mult_hi, mult_lo);
     return Math.max(mult_hi, mult_lo);
   }
 
