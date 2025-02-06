@@ -418,6 +418,8 @@ function GridMaker(id, params, master_grid = null) {
         for (var y$ = y1; y$ > 0; y$ /= self.$_mult) {
             y$ = log_rounder(y$, q)
             let y = Math.floor(math.log(y$) * self.A + self.B)
+            console.log("logscale push");
+            
             self.ys.push([y, Utils.strip(y$)])
             if (y > height) break
             if (y - yp < $p.config.GRIDY * 0.7) break
