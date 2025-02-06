@@ -238,15 +238,17 @@ function GridMaker(id, params, master_grid = null) {
         let n = h / $p.config.GRIDY // target grid N
         let yrange = self.$_hi
         console.log("dollar_mult_hi", self.$_lo, self.$_hi);
+        let yratio;
         if (self.$_lo > 0) {
-            var yratio = self.$_hi / self.$_lo
+            yratio = (self.$_hi + 1) / (self.$_lo + 1);
         } else {
-            yratio = self.$_hi / 1 // TODO: small values
+            yratio = (self.$_hi + 1) / 1; // TODO: small values
         }
         console.log("dollar_mult_hi yratio",yratio);
         let m = yrange * ($p.config.GRIDY / h)
         let p = parseInt(yrange.toExponential().split('e')[1])
-        return Math.pow(yratio, 1/n)
+        let scalingFactor = Math.pow(yratio, 1 / n);
+        return Math.max(scalingFactor, 0.01);
     }
 
     function dollar_mult_lo() {
@@ -255,14 +257,16 @@ function GridMaker(id, params, master_grid = null) {
         if (h < $p.config.GRIDY) return 1
         let n = h / $p.config.GRIDY // target grid N
         let yrange = Math.abs(self.$_lo)
+        let yratio;
         if (self.$_hi < 0 && self.$_lo < 0) {
-            var yratio = Math.abs(self.$_lo / self.$_hi)
+            yratio = Math.abs((self.$_lo + 1) / (self.$_hi + 1));
         } else {
-            yratio = Math.abs(self.$_lo) / 1
+            yratio = (Math.abs(self.$_lo) + 1) / 1;
         }
         let m = yrange * ($p.config.GRIDY / h)
         let p = parseInt(yrange.toExponential().split('e')[1])
-        return Math.pow(yratio, 1/n)
+        let scalingFactor = Math.pow(yratio, 1 / n);
+        return Math.max(scalingFactor, 0.01);
     }
 
     function grid_x() {

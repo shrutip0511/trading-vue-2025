@@ -6295,29 +6295,33 @@ function GridMaker(id, params, master_grid) {
     var n = h / $p.config.GRIDY; // target grid N
     var yrange = self.$_hi;
     console.log("dollar_mult_hi", self.$_lo, self.$_hi);
+    var yratio;
     if (self.$_lo > 0) {
-      var yratio = self.$_hi / self.$_lo;
+      yratio = (self.$_hi + 1) / (self.$_lo + 1);
     } else {
-      yratio = self.$_hi / 1; // TODO: small values
+      yratio = (self.$_hi + 1) / 1; // TODO: small values
     }
     console.log("dollar_mult_hi yratio", yratio);
     var m = yrange * ($p.config.GRIDY / h);
     var p = parseInt(yrange.toExponential().split('e')[1]);
-    return Math.pow(yratio, 1 / n);
+    var scalingFactor = Math.pow(yratio, 1 / n);
+    return Math.max(scalingFactor, 0.01);
   }
   function dollar_mult_lo() {
     var h = Math.min(height - self.B, height);
     if (h < $p.config.GRIDY) return 1;
     var n = h / $p.config.GRIDY; // target grid N
     var yrange = Math.abs(self.$_lo);
+    var yratio;
     if (self.$_hi < 0 && self.$_lo < 0) {
-      var yratio = Math.abs(self.$_lo / self.$_hi);
+      yratio = Math.abs((self.$_lo + 1) / (self.$_hi + 1));
     } else {
-      yratio = Math.abs(self.$_lo) / 1;
+      yratio = (Math.abs(self.$_lo) + 1) / 1;
     }
     var m = yrange * ($p.config.GRIDY / h);
     var p = parseInt(yrange.toExponential().split('e')[1]);
-    return Math.pow(yratio, 1 / n);
+    var scalingFactor = Math.pow(yratio, 1 / n);
+    return Math.max(scalingFactor, 0.01);
   }
   function grid_x() {
     // If this is a subgrid, no need to calc a timeline,
