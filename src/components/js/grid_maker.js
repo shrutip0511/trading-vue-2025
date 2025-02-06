@@ -229,19 +229,21 @@ function GridMaker(id, params, master_grid = null) {
         
         return Math.max(mult_hi, mult_lo)
     }
-
+    
     // Price step multiplier (for the log-scale mode)
     function dollar_mult_hi() {
-
+        
         let h = Math.min(self.B, height)
         if (h < $p.config.GRIDY) return 1
         let n = h / $p.config.GRIDY // target grid N
         let yrange = self.$_hi
+        console.log("dollar_mult_hi", self.$_lo);
         if (self.$_lo > 0) {
             var yratio = self.$_hi / self.$_lo
         } else {
             yratio = self.$_hi / 1 // TODO: small values
         }
+        console.log("dollar_mult_hi yratio",yratio);
         let m = yrange * ($p.config.GRIDY / h)
         let p = parseInt(yrange.toExponential().split('e')[1])
         return Math.pow(yratio, 1/n)

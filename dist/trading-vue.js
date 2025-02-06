@@ -6294,11 +6294,13 @@ function GridMaker(id, params, master_grid) {
     if (h < $p.config.GRIDY) return 1;
     var n = h / $p.config.GRIDY; // target grid N
     var yrange = self.$_hi;
+    console.log("dollar_mult_hi", self.$_lo);
     if (self.$_lo > 0) {
       var yratio = self.$_hi / self.$_lo;
     } else {
       yratio = self.$_hi / 1; // TODO: small values
     }
+    console.log("dollar_mult_hi yratio", yratio);
     var m = yrange * ($p.config.GRIDY / h);
     var p = parseInt(yrange.toExponential().split('e')[1]);
     return Math.pow(yratio, 1 / n);
